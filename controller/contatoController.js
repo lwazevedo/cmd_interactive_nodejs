@@ -5,7 +5,7 @@ const addContato = (newContato) => {
     contato.create(newContato,(err) => {
         assert.equal(null,err)
         console.info('Novo contato adicionado.')
-        global.db.disconnect()
+        global.db.close()
     })
 }
 
@@ -19,7 +19,7 @@ const getContato = (nome) => {
         } else {
             console.log('Nenhum contato encontrado.')
         }
-        global.db.disconnect()
+        global.db.close()
     })
 }
 

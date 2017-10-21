@@ -1,4 +1,3 @@
-const mongoose = require('mongoose')
 
 function toLower(v) {
     return v.toLowerCase();
