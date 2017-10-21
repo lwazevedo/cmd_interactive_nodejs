@@ -1,15 +1,11 @@
-const {mongoose, contato} = require('./../model/contato')
-const assert = require('assert')
-
-mongoose.Promise = global.Promise
-
-const db  = mongoose.connect('mongodb://localhost:27017/contato')
+const assert  = require('assert')
+const {contato} = require('./../model/contato')
 
 const addContato = (newContato) => {
     contato.create(newContato,(err) => {
         assert.equal(null,err)
         console.info('Novo contato adicionado.')
-        db.disconnect()
+        global.db.disconnect()
     })
 }
 
@@ -23,7 +19,7 @@ const getContato = (nome) => {
         } else {
             console.log('Nenhum contato encontrado.')
         }
-        db.disconnect()
+        global.db.disconnect()
     })
 }
 

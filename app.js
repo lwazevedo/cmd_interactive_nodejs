@@ -1,3 +1,5 @@
+require('./config/db')
+
 const contato = require('./controller/contatoController')
 
 const nContato = {
