@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 require('./config/db')
 require('./controller/commanderController')
 // const contato = require('./controller/contatoController')

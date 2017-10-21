@@ -2,6 +2,8 @@
   "name": "cmd_interactive_nodejs",
   "version": "1.0.0",
   "description": "app de linha de comando interativa",
+  "preferGlobal": true,
+  "bin": "./app.js",
   "main": "index.js",
   "scripts": {
     "start": "node app.js --help"
