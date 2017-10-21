@@ -1,5 +1,10 @@
 const cmd = require('commander')
 const {
+    prompt
+} = require('inquirer')
+const perguntas = require('./../config/perguntas')
+
+const {
     addContato,
     getContato
 } = require('./contatoController')
@@ -10,15 +15,13 @@ cmd
 
 
 cmd
-    .command('addContato <Nome> <Telefone> <email>')
+    .command('addContato')
     .alias('add')
     .description('Adiciona contato')
-    .action((nome, telefone, email) => {
-        addContato({
-            nome,
-            telefone,
-            email
-        })
+    .action(() => {
+        prompt(perguntas.addContato)
+            .then(asw =>
+                addContato(asw))
     })
 
 cmd
