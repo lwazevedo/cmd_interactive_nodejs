@@ -16,6 +16,6 @@
     "eslint": "^4.8.0",
     "inquirer": "^3.3.0",
     "lodash": "^4.17.4",
-    "mongoose": "^4.12.1"
+    "mongoose": "^5.13.15"
   }
 }
